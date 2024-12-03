@@ -1,0 +1,65 @@
+body {
+    background-color: #f4f4f4;  /* Light background color */
+    font-family: 'Arial', sans-serif;  /* Font family */
+    color: #333;  /* Text color */
+}
+
+h1, h2, h3 {
+    color: #2C3E50;  /* Dark blue for headers */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.card-header {
+    font-size: 1.5em;
+    color: #16A085;
+}
+
+.card-content {
+    font-size: 1.1em;
+    color: #7F8C8D;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Adds a line between each row */
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* Remove the line after the last row */
+}

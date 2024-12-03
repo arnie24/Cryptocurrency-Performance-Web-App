@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Performance</title>
+        <!-- Add external CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <!-- Include Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+</head>
+<body>
+    <header>
+        <h1>Cryptocurrency Performance</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Top 10 Cryptocurrencies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>24h Change (%)</th>
+                        <th>7d Change (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for coin in coins.iterrows() %}
+                    <tr>
+                        <td>{{ coin[1].name }}</td>
+                        <td>{{ coin[1].symbol }}</td>
+                        <td>{{ "%.2f" | format(coin[1].percent_change_24h) }}</td>
+                        <td>{{ "%.2f" | format(coin[1].percent_change_7d) }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <div class="chart-container">
+                {{ plot_html | safe }}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Data provided by CoinMarketCap</p>
+    </footer>
+</body>
+</html>
